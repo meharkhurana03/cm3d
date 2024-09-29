@@ -176,7 +176,7 @@
         <div class="col-md-8 col-md-offset-2">
             <h3>Pipeline</h3>
             <div class="text-center">
-                <img src="images/cm3d_pipeline-cropped.pdf" class="img-responsive" alt="CM3D Pseudo-Label Pipeline"
+                <img src="images/cm3d_pipeline-cropped-1.png" class="img-responsive" alt="CM3D Pseudo-Label Pipeline"
                     style="width:100%;height:auto;">
                 <!-- <figcaption>CM3D Pseudo-Label Pipeline</figcaption> -->
             </div>
@@ -195,41 +195,30 @@
             </div>
         </div> -->
 
-    <br>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>Visuals</h3>
-            <div class="text-center">
-                <img src="images/cm3d_visuals-cropped.pdf" class="img-responsive" alt="CM3D Visuals"
-                    style="width:100%;height:auto;">
-                <!-- <figcaption>CM3D Visuals</figcaption> -->
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>Results</h3>
-            <p>
-                In the zero-shot setting, our method significantly outperforms the only prior method, SAM3D in both mAP and NDS metrics
-                on the nuScenes dataset.
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Method</th>
-                        <th>mAP</th>
-                        <th>NDS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CM3D (Ours)</td>
-                        <td><strong>
-                                23.0%
-                            </strong>
-                        </td>
-                        <td><strong>
+        
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Results</h3>
+                <p>
+                    In the zero-shot setting, our method significantly outperforms the only prior method, SAM3D in both mAP and NDS metrics
+                    on the nuScenes dataset.
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>mAP</th>
+                                <th>NDS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CM3D (Ours)</td>
+                                <td><strong>
+                                    23.0%
+                                </strong>
+                            </td>
+                            <td><strong>
                                 22.1%
                             </strong>
                         </td>
@@ -241,136 +230,147 @@
                     </tr>
                 </tbody>
             </table>
-            </p>
-
-            <br>
-
-            <p>
-                In the semi-supervised setting, our method also outperforms prior methods in both mAP and NDS metrics
-                when less data is available.
-
-
-                <!-- <div class="row">
+        </p>
+        
+        <br>
+        
+        <p>
+            In the semi-supervised setting, our method also outperforms prior methods in both mAP and NDS metrics
+            when less data is available.
+            
+            
+            <!-- <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h3>Semi-Supervised 3D Detection on NuScenes</h3>
                     <p>In terms of zero-shot accuracy, pseudo-labels from <strong>CM3D</strong> outperform prior art (SAM3D) by 20.7% NDS. With 5% supervised training data, pre-training CenterPoint with CM3D pseudo-labels improves over the prior art of PRC by 8.1 mAP / 2.8 NDS. When comparing Camera-LiDAR methods, pre-training BEVFusion with CM3D pseudo-labels outperforms prior art (CALICO) by 8.6 mAP / 4.6 NDS.</p>
                 -->
-
-            <h5>LiDAR-only models</h5>
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Training Data</th>
-                        <th>Method</th>
-                        <th>mAP &uarr;</th>
-                        <th>NDS &uarr;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>5%</td>
-                        <td>CenterPoint + PRC</td>
-                        <td>38.2</td>
-                        <td>46.0</td>
-                    </tr>
-                    <tr>
-                        <td>5%</td>
-                        <td>CenterPoint + CM3D (Ours)</td>
-                        <td><strong>46.3</strong></td>
-                        <td><strong>48.8</strong></td>
-                    </tr>
-                    <tr>
-                        <td>10%</td>
-                        <td>CenterPoint + PRC</td>
-                        <td>44.1</td>
-                        <td>53.1</td>
-                    </tr>
-                    <tr>
-                        <td>10%</td>
-                        <td>CenterPoint + CM3D (Ours)</td>
-                        <td><strong>51.0</strong></td>
-                        <td><strong>56.3</strong></td>
-                    </tr>
-                    <tr>
-                        <td>20%</td>
-                        <td>CenterPoint + PRC</td>
-                        <td>49.5</td>
-                        <td>58.9</td>
-                    </tr>
-                    <tr>
-                        <td>20%</td>
-                        <td>CenterPoint + CM3D (Ours)</td>
-                        <td><strong>54.5</strong></td>
-                        <td><strong>59.0</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-
-            <div style="height: 10px;"></div>
-            <h5>LiDAR + RGB models</h5>
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Training Data</th>
-                        <th>Method</th>
-                        <th>mAP &uarr;</th>
-                        <th>NDS &uarr;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>5%</td>
-                        <td>CALICO</td>
-                        <td>41.7</td>
-                        <td>47.9</td>
-                    </tr>
-                    <tr>
-                        <td>5%</td>
-                        <td>BEVFusion + CM3D (Ours)</td>
-                        <td><strong>51.3</strong></td>
-                        <td><strong>52.5</strong></td>
-                    </tr>
-                    <tr>
-                        <td>10%</td>
-                        <td>CALICO</td>
-                        <td>50.0</td>
-                        <td>53.9</td>
-                    </tr>
-                    <tr>
-                        <td>10%</td>
-                        <td>BEVFusion + CM3D (Ours)</td>
-                        <td><strong>53.3</strong></td>
-                        <td><strong>56.5</strong></td>
-                    </tr>
-                    <tr>
-                        <td>20%</td>
-                        <td>CALICO</td>
-                        <td>54.8</td>
-                        <td>59.5</td>
-                    </tr>
-                    <tr>
-                        <td>20%</td>
-                        <td>BEVFusion + CM3D (Ours)</td>
-                        <td><strong>56.2</strong></td>
-                        <td><strong>60.2</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-
-
+                
+                <h5>LiDAR-only models</h5>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Training Data</th>
+                            <th>Method</th>
+                            <th>mAP &uarr;</th>
+                            <th>NDS &uarr;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5%</td>
+                            <td>CenterPoint + PRC</td>
+                            <td>38.2</td>
+                            <td>46.0</td>
+                        </tr>
+                        <tr>
+                            <td>5%</td>
+                            <td>CenterPoint + CM3D (Ours)</td>
+                            <td><strong>46.3</strong></td>
+                            <td><strong>48.8</strong></td>
+                        </tr>
+                        <tr>
+                            <td>10%</td>
+                            <td>CenterPoint + PRC</td>
+                            <td>44.1</td>
+                            <td>53.1</td>
+                        </tr>
+                        <tr>
+                            <td>10%</td>
+                            <td>CenterPoint + CM3D (Ours)</td>
+                            <td><strong>51.0</strong></td>
+                            <td><strong>56.3</strong></td>
+                        </tr>
+                        <tr>
+                            <td>20%</td>
+                            <td>CenterPoint + PRC</td>
+                            <td>49.5</td>
+                            <td>58.9</td>
+                        </tr>
+                        <tr>
+                            <td>20%</td>
+                            <td>CenterPoint + CM3D (Ours)</td>
+                            <td><strong>54.5</strong></td>
+                            <td><strong>59.0</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+                
+                <div style="height: 10px;"></div>
+                <h5>LiDAR + RGB models</h5>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Training Data</th>
+                            <th>Method</th>
+                            <th>mAP &uarr;</th>
+                            <th>NDS &uarr;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5%</td>
+                            <td>CALICO</td>
+                            <td>41.7</td>
+                            <td>47.9</td>
+                        </tr>
+                        <tr>
+                            <td>5%</td>
+                            <td>BEVFusion + CM3D (Ours)</td>
+                            <td><strong>51.3</strong></td>
+                            <td><strong>52.5</strong></td>
+                        </tr>
+                        <tr>
+                            <td>10%</td>
+                            <td>CALICO</td>
+                            <td>50.0</td>
+                            <td>53.9</td>
+                        </tr>
+                        <tr>
+                            <td>10%</td>
+                            <td>BEVFusion + CM3D (Ours)</td>
+                            <td><strong>53.3</strong></td>
+                            <td><strong>56.5</strong></td>
+                        </tr>
+                        <tr>
+                            <td>20%</td>
+                            <td>CALICO</td>
+                            <td>54.8</td>
+                            <td>59.5</td>
+                        </tr>
+                        <tr>
+                            <td>20%</td>
+                            <td>BEVFusion + CM3D (Ours)</td>
+                            <td><strong>56.2</strong></td>
+                            <td><strong>60.2</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
             </p>
         </div>
     </div>
-
-    <!-- </div> -->
-
+    <br>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h3>Citation</h3>
-            <div class="form-group">
-                <textarea id="bibtex" class="form-control" rows="6" readonly>
+            <h3>Visuals</h3>
+            <div class="text-center">
+                <img src="images/cm3d_visuals-cropped-1.png" class="img-responsive" alt="CM3D Visuals"
+                    style="width:100%;height:auto;">
+                <!-- <figcaption>CM3D Visuals</figcaption> -->
+            </div>
+        </div>
+    </div>
+    
+<!-- </div> -->
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h3>Citation</h3>
+        <div class="form-group">
+            <textarea id="bibtex" class="form-control" rows="6" readonly>
 @article{khurana2024shelf,
         title={Shelf-Supervised Multi-Modal Pre-Training for 3D Object Detection},
         author={Khurana, Mehar and Peri, Neehar and Ramanan, Deva and Hays, James},
