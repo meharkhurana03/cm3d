@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -6,92 +5,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>CM3D</title>
+    <title>CM3D - Shelf-Supervised Pre-Training for 3D Object Detection</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection - CoRL 2024">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg">
+    <meta property="og:image" content="path_to_image.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1296">
     <meta property="og:image:height" content="840">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jonbarron.info/mipnerf360/"/>
-    <meta property="og:title" content="Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields" />
-    <meta property="og:description" content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on 'unbounded' scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub 'mip-NeRF 360' as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes." />
+    <meta property="og:url" content="your_project_page_url" />
+    <meta property="og:title" content="Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection" />
+    <meta property="og:description"
+        content="A novel approach using shelf-supervision from image foundation models to enhance 3D object detection in autonomous driving." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields" />
-    <meta name="twitter:description" content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on 'unbounded' scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub 'mip-NeRF 360' as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes." />
-    <meta name="twitter:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg" />
+    <meta name="twitter:title" content="Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection" />
+    <meta name="twitter:description"
+        content="A new method to pre-train 3D object detectors using image foundation models for autonomous vehicles." />
+    <meta name="twitter:image" content="path_to_image.png" />
 
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
-
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="css/app.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-    
     <script src="js/app.js"></script>
 </head>
 
 <body>
+    <!-- add some vertical space-->
+    <div style="height: 50px;"></div>
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                Shelf-Supervised Cross-Modal <br> Pre-Training for 3D Object Detection</br> 
-                <small>
-								CoRL 2024
-                </small>
+                Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection
+                <br>
+                <!-- <small>CoRL 2024</small> -->
             </h2>
         </div>
-        <!-- <div class="row">
+        <div style="height: 10px;"></div>
+        <div class="row">
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
                         <a href="https://meharkhurana03.github.io/">
-                          Mehar Khurana
-                        </a>
-                        </br> 
+                            Mehar Khurana
+                        </a>*<sup>1</sup>
                     </li>
                     <li>
-                        <a href="http://bmild.github.io/">
-                            Ben Mildenhall
-                        </a>
-                        </br>Google
+                        <a href="https://neeharperi.com/">
+                            Neehar Peri
+                        </a>*<sup>2</sup>
                     </li>
                     <li>
-                        <a href="https://scholar.harvard.edu/dorverbin/home">
-                          Dor Verbin
-                        </a>
-                        </br>Harvard University
-                    </li><br>
-                    <li>
-                        <a href="https://pratulsrinivasan.github.io/">
-                          Pratul P. Srinivasan
-                        </a>
-                        </br>Google
+                        <a href="https://faculty.cc.gatech.edu/~hays/">
+                            James Hays
+                        </a><sup>3</sup>
                     </li>
                     <li>
-                        <a href="https://phogzone.com/">
-                          Peter Hedman
-                        </a>
-                        </br>Google
+                        <a href="https://cs.cmu.edu/~deva/">
+                            Deva Ramanan
+                        </a><sup>2</sup>
                     </li>
                 </ul>
-            </div> -->
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <sup>1</sup> IIIT Delhi &nbsp;
+                            <!-- <br> -->
+                            <sup>2</sup> Carnegie Mellon University &nbsp;
+                            <!-- <br> -->
+                            <sup>3</sup> Georgia Institute of Technology &nbsp;
+
+                            * Equal contribution
+
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div style="height: 0px;"></div>
+
         </div>
+        <div class="col-md-12 text-center">
+            <a href="https://github.com/meharkhurana03/cm3d" target="_blank" class="btn btn-default">
+                <i class="fa fa-github fa-2x"></i>
+            </a>
+            <a href="https://arxiv.org/abs/2406.10115" class="btn btn-default" target="_blank">
+                <i class="ai ai-arxiv" style="font-size: 2em;"></i>
+                <!-- <span>arXiv</span> -->
+            </a>
+            <a href="https://arxiv.org/pdf/2406.10115" target="_blank" class="btn btn-default">
+                <i class="fa fa-file-pdf-o fa-2x"></i>
+            </a>
+
+            <!-- <a href="https://youtu.be/your-video-id" target="_blank" class="btn btn-default">
+                    <i class="fa fa-youtube fa-2x"></i> Video
+                </a> -->
+        </div>
+    </div>
 
 
-        <!-- <div class="row">
+    <!-- <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
@@ -128,81 +152,246 @@
                         </li>
                     </ul>
                 </div>
+        </div> -->
+
+
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Abstract</h3>
+            <p class="text-justify">
+                State-of-the-art 3D object detectors are often trained on massive labeled datasets. However, annotating
+                3D bounding boxes remains expensive and time-consuming, especially for LiDAR. We propose a
+                shelf-supervised approach leveraging off-the-shelf image foundation models to pre-train 3D detectors.
+                Our method improves detection accuracy in semi-supervised settings by generating zero-shot 3D bounding
+                boxes using multimodal data from RGB and LiDAR. We demonstrate the effectiveness of our approach on
+                nuScenes and WOD benchmarks, significantly outperforming prior self-supervised methods.
+            </p>
         </div>
+    </div>
 
+    <!-- crop out the bottom of the image -->
 
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/gardenvase_720.mp4" type="video/mp4" />
-                </video>
-						</div>
-            <div class="col-md-8 col-md-offset-2">
-							<p class="text-center">
-							Rendered images and depths from our model.
-							</p>
-						</div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Abstract
-                </h3>
-                <p class="text-justify">
-Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on "unbounded" scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub "mip-NeRF 360" as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes.
-                </p>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Video
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://youtube.com/embed/zBSH-k9GbV4" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Citation
-                </h3>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <textarea id="bibtex" class="form-control" readonly>
-@article{barron2022mipnerf360,
-    title={Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields},
-    author={Jonathan T. Barron and Ben Mildenhall and 
-            Dor Verbin and Pratul P. Srinivasan and Peter Hedman},
-    journal={CVPR},
-    year={2022}
-}</textarea>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Acknowledgements
-                </h3>
-                <p class="text-justify">
-                Thanks to Ricardo Martin-Brualla and David Salesin for their comments on the text, and to George Drettakis and Georgios Kopanas for graciously assisting us with our baseline evaluation.
-                    <br>
-                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
-                </p>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Pipeline</h3>
+            <div class="text-center">
+                <img src="images/cm3d_pipeline-cropped.pdf" class="img-responsive" alt="CM3D Pseudo-Label Pipeline"
+                    style="width:100%;height:auto;">
+                <!-- <figcaption>CM3D Pseudo-Label Pipeline</figcaption> -->
             </div>
         </div>
     </div>
---> </body>
+
+
+    <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Video</h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://youtube.com/embed/your_video_id" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <br>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Visuals</h3>
+            <div class="text-center">
+                <img src="images/cm3d_visuals-cropped.pdf" class="img-responsive" alt="CM3D Visuals"
+                    style="width:100%;height:auto;">
+                <!-- <figcaption>CM3D Visuals</figcaption> -->
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Results</h3>
+            <p>
+                In the zero-shot setting, our method significantly outperforms the only prior method, SAM3D in both mAP and NDS metrics
+                on the nuScenes dataset.
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>mAP</th>
+                        <th>NDS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CM3D (Ours)</td>
+                        <td><strong>
+                                23.0%
+                            </strong>
+                        </td>
+                        <td><strong>
+                                22.1%
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SAM3D</td>
+                        <td>1.7%</td>
+                        <td>2.4%</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <br>
+
+            <p>
+                In the semi-supervised setting, our method also outperforms prior methods in both mAP and NDS metrics
+                when less data is available.
+
+
+                <!-- <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>Semi-Supervised 3D Detection on NuScenes</h3>
+                    <p>In terms of zero-shot accuracy, pseudo-labels from <strong>CM3D</strong> outperform prior art (SAM3D) by 20.7% NDS. With 5% supervised training data, pre-training CenterPoint with CM3D pseudo-labels improves over the prior art of PRC by 8.1 mAP / 2.8 NDS. When comparing Camera-LiDAR methods, pre-training BEVFusion with CM3D pseudo-labels outperforms prior art (CALICO) by 8.6 mAP / 4.6 NDS.</p>
+                -->
+
+            <h5>LiDAR-only models</h5>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Training Data</th>
+                        <th>Method</th>
+                        <th>mAP &uarr;</th>
+                        <th>NDS &uarr;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5%</td>
+                        <td>CenterPoint + PRC</td>
+                        <td>38.2</td>
+                        <td>46.0</td>
+                    </tr>
+                    <tr>
+                        <td>5%</td>
+                        <td>CenterPoint + CM3D (Ours)</td>
+                        <td><strong>46.3</strong></td>
+                        <td><strong>48.8</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>CenterPoint + PRC</td>
+                        <td>44.1</td>
+                        <td>53.1</td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>CenterPoint + CM3D (Ours)</td>
+                        <td><strong>51.0</strong></td>
+                        <td><strong>56.3</strong></td>
+                    </tr>
+                    <tr>
+                        <td>20%</td>
+                        <td>CenterPoint + PRC</td>
+                        <td>49.5</td>
+                        <td>58.9</td>
+                    </tr>
+                    <tr>
+                        <td>20%</td>
+                        <td>CenterPoint + CM3D (Ours)</td>
+                        <td><strong>54.5</strong></td>
+                        <td><strong>59.0</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <div style="height: 10px;"></div>
+            <h5>LiDAR + RGB models</h5>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Training Data</th>
+                        <th>Method</th>
+                        <th>mAP &uarr;</th>
+                        <th>NDS &uarr;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5%</td>
+                        <td>CALICO</td>
+                        <td>41.7</td>
+                        <td>47.9</td>
+                    </tr>
+                    <tr>
+                        <td>5%</td>
+                        <td>BEVFusion + CM3D (Ours)</td>
+                        <td><strong>51.3</strong></td>
+                        <td><strong>52.5</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>CALICO</td>
+                        <td>50.0</td>
+                        <td>53.9</td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>BEVFusion + CM3D (Ours)</td>
+                        <td><strong>53.3</strong></td>
+                        <td><strong>56.5</strong></td>
+                    </tr>
+                    <tr>
+                        <td>20%</td>
+                        <td>CALICO</td>
+                        <td>54.8</td>
+                        <td>59.5</td>
+                    </tr>
+                    <tr>
+                        <td>20%</td>
+                        <td>BEVFusion + CM3D (Ours)</td>
+                        <td><strong>56.2</strong></td>
+                        <td><strong>60.2</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            </p>
+        </div>
+    </div>
+
+    <!-- </div> -->
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Citation</h3>
+            <div class="form-group">
+                <textarea id="bibtex" class="form-control" rows="6" readonly>
+@article{khurana2024shelf,
+        title={Shelf-Supervised Multi-Modal Pre-Training for 3D Object Detection},
+        author={Khurana, Mehar and Peri, Neehar and Ramanan, Deva and Hays, James},
+        journal={arXiv preprint arXiv:2406.10115},
+        year={2024}
+}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Acknowledgements</h3>
+                <p>
+                    Special thanks to collaborators and sponsors for their support in the development of this project.
+                </p>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+
 </html>

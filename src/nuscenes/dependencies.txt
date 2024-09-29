@@ -1,0 +1,2 @@
+-e git+https://github.com/IDEA-Research/Grounded-Segment-Anything.git@4689dea696cfbb2c2a359ea663faec27cf7345a4#egg=groundingdino&subdirectory=GroundingDINO
+-e git+https://github.com/IDEA-Research/Grounded-Segment-Anything.git@4689dea696cfbb2c2a359ea663faec27cf7345a4#egg=segment_anything&subdirectory=segment_anything
