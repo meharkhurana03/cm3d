@@ -15,45 +15,59 @@
     <meta property="og:image:width" content="1296">
     <meta property="og:image:height" content="840">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="your_project_page_url" />
+    <meta property="og:url" content="" />
     <meta property="og:title" content="Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection" />
     <meta property="og:description"
-        content="A novel approach using shelf-supervision from image foundation models to enhance 3D object detection in autonomous driving." />
+        content="A novel approach using shelf-supervision from image foundation models to enhance 3D object detection." />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection" />
     <meta name="twitter:description"
-        content="A new method to pre-train 3D object detectors using image foundation models for autonomous vehicles." />
+        content="A novel method to pre-train 3D object detectors using image foundation models." />
     <meta name="twitter:image" content="path_to_image.png" />
 
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="css/app.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'> -->
+    <!-- <link rel="stylesheet" href="data/assets/css/styles.css"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/scene_pics/jfk_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/scene_pics/jfk_16.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
     <script src="js/app.js"></script>
+    <!-- <style>
+        .btn-default:hover {
+            background-color: #ddd;
+            border-color: #bbb;
+            transition: 0.3s;
+        }
+    </style> -->
 </head>
 
+
 <body>
-    <!-- add some vertical space-->
     <div style="height: 50px;"></div>
     <div class="container" id="main">
         <div class="row">
-            <h2 class="col-md-12 text-center">
+            <h2 class="col-md-12 text-center" style="font-size: 3em;">
                 Shelf-Supervised Cross-Modal Pre-Training for 3D Object Detection
                 <br>
-                <!-- <small>CoRL 2024</small> -->
             </h2>
         </div>
         <div style="height: 10px;"></div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <ul class="list-inline">
+                <ul class="list-inline" style="font-size: 2.2em;">
                     <li>
                         <a href="https://meharkhurana03.github.io/">
                             Mehar Khurana
@@ -78,15 +92,11 @@
 
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <p>
+                        <p style="font-size: 1.45em;">
                             <sup>1</sup> IIIT Delhi &nbsp;
-                            <!-- <br> -->
                             <sup>2</sup> Carnegie Mellon University &nbsp;
-                            <!-- <br> -->
                             <sup>3</sup> Georgia Institute of Technology &nbsp;
-
                             * Equal contribution
-
                         </p>
                     </div>
                 </div>
@@ -94,72 +104,66 @@
                 <br>
             </div>
             <div style="height: 0px;"></div>
-
         </div>
         <div class="col-md-12 text-center">
-            <a href="https://github.com/meharkhurana03/cm3d" target="_blank" class="btn btn-default">
+            <!-- <a href="https://github.com/meharkhurana03/cm3d" target="_blank" class="btn btn-default">
                 <i class="fa fa-github fa-2x"></i>
             </a>
             <a href="https://arxiv.org/abs/2406.10115" class="btn btn-default" target="_blank">
                 <i class="ai ai-arxiv" style="font-size: 2em;"></i>
-                <!-- <span>arXiv</span> -->
             </a>
             <a href="https://arxiv.org/pdf/2406.10115" target="_blank" class="btn btn-default">
                 <i class="fa fa-file-pdf-o fa-2x"></i>
             </a>
+        </div>
 
-            <!-- <a href="https://youtu.be/your-video-id" target="_blank" class="btn btn-default">
-                    <i class="fa fa-youtube fa-2x"></i> Video
-                </a> -->
+        <div id="container">
+            <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;"> -->
+               <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2406.10115" style="font-size: 1.3em;">
+                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="none" viewBox="0 0 24 24">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7h1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h11.5M7 14h6m-6 3h6m0-10h.5m-.5 3h.5M7 7h3v3H7V7Z"></path>
+                     </svg>
+
+                     Paper
+               </a>
+               <a class="btn btn-light" role="button" href="https://github.com/meharkhurana03/cm3d/" style="font-size: 1.3em;">
+                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="currentColor" viewBox="0 0 24 24">
+                       <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
+                     </svg>
+                     
+                   Code
+               </a>
+
+               <!-- <a class="btn btn-light" role="button" href="https://huggingface.co/datasets/bibimbap123/transientangelo_dataset/tree/main">
+                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
+                     </svg>
+               Dataset -->
+           </a> 
+
+
+           </div>
+         </div>
+       </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" style="max-width: 1280px;">
+        <div class="col-md-8 col-md-offset-2">
+            <!-- <h3 style="font-size: 2.2em;">Pipeline</h3> -->
+            <div class="text-center">
+                <img src="images/cm3d_overview-1.png" class="img-responsive" alt="CM3D Overview"
+                    style="width:100%;height:auto;">
+            </div>
         </div>
     </div>
-
-
-    <!-- <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="https://arxiv.org/abs/2111.12077">
-                            <image src="img/360_paper_image.jpg" height="60px">
-                                <h4><strong>Paper</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/zBSH-k9GbV4">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://storage.googleapis.com/gresearch/refraw360/360_v2.zip" target="popup" onclick="window.open('http://storage.googleapis.com/gresearch/refraw360/360_v2.zip','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 1</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-" target="popup" onclick="window.open('https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 2</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://github.com/google-research/multinerf">
-                            <image src="img/github.png" height="60px">
-                                <h4><strong>Code</strong></h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-        </div> -->
-
-
-
-    <div class="row">
+    <br>
+    <br>
+    <br>
+    <div class="container" style="max-width: 1280px;">
         <div class="col-md-8 col-md-offset-2">
-            <h3>Abstract</h3>
-            <p class="text-justify">
+            <h3 style="font-size: 2.2em;">Abstract</h3>
+            <p class="text-justify" style="font-size: 1.45em;">
                 State-of-the-art 3D object detectors are often trained on massive labeled datasets. However, annotating
                 3D bounding boxes remains expensive and time-consuming, especially for LiDAR. We propose a
                 shelf-supervised approach leveraging off-the-shelf image foundation models to pre-train 3D detectors.
@@ -169,56 +173,45 @@
             </p>
         </div>
     </div>
+    
 
-    <!-- crop out the bottom of the image -->
-
-    <div class="row">
+    <br>
+    <div class="container" style="max-width: 1280px;">
         <div class="col-md-8 col-md-offset-2">
-            <h3>Pipeline</h3>
+            <!-- <h3 style="font-size: 2.2em;">Pseudo-labeling Pipeline</h3> -->
             <div class="text-center">
                 <img src="images/cm3d_pipeline-cropped-1.png" class="img-responsive" alt="CM3D Pseudo-Label Pipeline"
                     style="width:100%;height:auto;">
-                <!-- <figcaption>CM3D Pseudo-Label Pipeline</figcaption> -->
+                <figcaption style="font-size: 1.2em">Our Pseudo-labeling Pipeline</figcaption>
             </div>
         </div>
     </div>
 
-
-    <!-- <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Video</h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://youtube.com/embed/your_video_id" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        
-        <br>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Results</h3>
-                <p>
-                    In the zero-shot setting, our method significantly outperforms the only prior method, SAM3D in both mAP and NDS metrics
-                    on the nuScenes dataset.
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Method</th>
-                                <th>mAP</th>
-                                <th>NDS</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>CM3D (Ours)</td>
-                                <td><strong>
-                                    23.0%
-                                </strong>
-                            </td>
-                            <td><strong>
+    <br>
+    <br>
+    <div class="container" style="max-width: 1280px;">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 style="font-size: 2.2em;">Results</h3>
+            <p style="font-size: 1.45em;">
+                In the zero-shot setting, our method significantly outperforms the only prior method, SAM3D in both mAP
+                and NDS metrics
+                on the nuScenes dataset.
+            <table class="table table-bordered" style="font-size: 1.45em;">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>mAP</th>
+                        <th>NDS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CM3D (Ours)</td>
+                        <td><strong>
+                                23.0%
+                            </strong>
+                        </td>
+                        <td><strong>
                                 22.1%
                             </strong>
                         </td>
@@ -230,57 +223,51 @@
                     </tr>
                 </tbody>
             </table>
-        </p>
-        
-        <br>
-        
-        <p>
-            In the semi-supervised setting, our method also outperforms prior methods in both mAP and NDS metrics
-            when less data is available.
-            
-            
-            <!-- <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h3>Semi-Supervised 3D Detection on NuScenes</h3>
-                    <p>In terms of zero-shot accuracy, pseudo-labels from <strong>CM3D</strong> outperform prior art (SAM3D) by 20.7% NDS. With 5% supervised training data, pre-training CenterPoint with CM3D pseudo-labels improves over the prior art of PRC by 8.1 mAP / 2.8 NDS. When comparing Camera-LiDAR methods, pre-training BEVFusion with CM3D pseudo-labels outperforms prior art (CALICO) by 8.6 mAP / 4.6 NDS.</p>
-                -->
-                
-                <h5>LiDAR-only models</h5>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Training Data</th>
-                            <th>Method</th>
-                            <th>mAP &uarr;</th>
-                            <th>NDS &uarr;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>5%</td>
-                            <td>CenterPoint + PRC</td>
-                            <td>38.2</td>
-                            <td>46.0</td>
-                        </tr>
-                        <tr>
-                            <td>5%</td>
-                            <td>CenterPoint + CM3D (Ours)</td>
-                            <td><strong>46.3</strong></td>
-                            <td><strong>48.8</strong></td>
-                        </tr>
-                        <tr>
-                            <td>10%</td>
-                            <td>CenterPoint + PRC</td>
-                            <td>44.1</td>
-                            <td>53.1</td>
-                        </tr>
-                        <tr>
-                            <td>10%</td>
-                            <td>CenterPoint + CM3D (Ours)</td>
-                            <td><strong>51.0</strong></td>
-                            <td><strong>56.3</strong></td>
-                        </tr>
-                        <tr>
+            </p>
+
+            <br>
+            <br>
+
+            <p style="font-size: 1.45em;">
+                In the semi-supervised setting, our method also outperforms prior methods in both mAP and NDS metrics
+                when less data is available.
+
+            <h5 style="font-size: 1.85em;">LiDAR-only models</h5>
+            <table class="table table-bordered table-striped" style="font-size: 1.45em;">
+                <thead>
+                    <tr>
+                        <th>Training Data</th>
+                        <th>Method</th>
+                        <th>mAP &uarr;</th>
+                        <th>NDS &uarr;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5%</td>
+                        <td>CenterPoint + PRC</td>
+                        <td>38.2</td>
+                        <td>46.0</td>
+                    </tr>
+                    <tr>
+                        <td>5%</td>
+                        <td>CenterPoint + CM3D (Ours)</td>
+                        <td><strong>46.3</strong></td>
+                        <td><strong>48.8</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>CenterPoint + PRC</td>
+                        <td>44.1</td>
+                        <td>53.1</td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>CenterPoint + CM3D (Ours)</td>
+                        <td><strong>51.0</strong></td>
+                        <td><strong>56.3</strong></td>
+                    </tr>
+                    <tr>
                             <td>20%</td>
                             <td>CenterPoint + PRC</td>
                             <td>49.5</td>
@@ -295,11 +282,11 @@
                     </tbody>
                 </table>
                 
-                
+                <!-- <br> -->
                 
                 <div style="height: 10px;"></div>
-                <h5>LiDAR + RGB models</h5>
-                <table class="table table-bordered table-striped">
+                <h5 style="font-size: 1.85em;">LiDAR + RGB models</h5>
+                <table class="table table-bordered table-striped" style="font-size: 1.45em;">
                     <thead>
                         <tr>
                             <th>Training Data</th>
@@ -353,9 +340,10 @@
         </div>
     </div>
     <br>
-    <div class="row">
+    <br>
+    <div class="container" style="max-width: 1280px;">
         <div class="col-md-8 col-md-offset-2">
-            <h3>Visuals</h3>
+            <h3 style="font-size: 2.2em;">Visuals</h3>
             <div class="text-center">
                 <img src="images/cm3d_visuals-cropped-1.png" class="img-responsive" alt="CM3D Visuals"
                     style="width:100%;height:auto;">
@@ -365,12 +353,14 @@
     </div>
     
 <!-- </div> -->
+ <br>
+ <br>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <h3>Citation</h3>
+        <h3 style="font-size: 2.2em;">Citation</h3>
         <div class="form-group">
-            <textarea id="bibtex" class="form-control" rows="6" readonly>
+            <textarea id="bibtex" class="form-control" rows="6" readonly style="font-size: 1.45em;">
 @article{khurana2024shelf,
         title={Shelf-Supervised Multi-Modal Pre-Training for 3D Object Detection},
         author={Khurana, Mehar and Peri, Neehar and Ramanan, Deva and Hays, James},
@@ -380,7 +370,7 @@
                     </textarea>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -391,6 +381,32 @@
             </div>
         </div> -->
 
+    </div>
+
+    <br>
+
+    <hr class="divider"/>
+    <div class="container" style="max-width: 836px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="font-size: 2.2em;">Citation</h3>
+                <code style="font-size: 1.2em; text-indent: 20%;">
+                    @inproceedings{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;khurana2024shelfsupervised,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;title={Shelf-Supervised Multi-Modal Pre-Training for 3D Object Detection},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;author={Mehar Khurana and Neehar Peri and James Hays and Deva Ramanan},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;booktitle={8th Annual Conference on Robot Learning},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;year={2024},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;url={https://openreview.net/forum?id=eeoX7tCoK2}<br>
+                        }
+                </code></div>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 836px;">
+        <footer>
+            <p> Website template borrowed from <a href="https://jonbarron.info/mipnerf360/">Mip-NERF 360</a> and <a href="https://weihan1.github.io/transientangelo/">Transientangelo</a>.</p>
+        </footer>
     </div>
 </body>
 
